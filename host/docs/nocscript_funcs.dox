@@ -1,0 +1,64 @@
+/*! \page page_nocscript_funcs NocScript Function Reference
+- Boolean Logic
+  - NOT: Returns !x
+    - ['BOOL'] -> BOOL
+  - TRUE: Always returns true
+    - [] -> BOOL
+  - XOR: Returns x xor y.
+    - ['BOOL', 'BOOL'] -> BOOL
+  - FALSE: Always returns false
+    - [] -> BOOL
+- Bitwise Operations
+  - SHIFT_RIGHT: Returns x >> y
+    - ['INT', 'INT'] -> INT
+  - BITWISE_OR: Returns x | y
+    - ['INT', 'INT'] -> INT
+  - BITWISE_AND: Returns x & y
+    - ['INT', 'INT'] -> INT
+  - SHIFT_LEFT: Returns x << y
+    - ['INT', 'INT'] -> INT
+  - BITWISE_XOR: Returns x ^ y
+    - ['INT', 'INT'] -> INT
+- Math Functions
+  - IS_PWR_OF_2: Returns true if x is a power of 2
+    - ['INT'] -> BOOL
+  - LE: Returns true if x <= y (Less or Equal)
+    - ['INT', 'INT'] -> BOOL
+    - ['DOUBLE', 'DOUBLE'] -> BOOL
+  - LOG2: Returns floor(log2(x)).
+    - ['INT'] -> INT
+  - EQUAL: Returns true if x == y
+    - ['INT', 'INT'] -> BOOL
+    - ['DOUBLE', 'DOUBLE'] -> BOOL
+    - ['STRING', 'STRING'] -> BOOL
+  - GE: Returns true if x >= y (Greater or Equal)
+    - ['INT', 'INT'] -> BOOL
+    - ['DOUBLE', 'DOUBLE'] -> BOOL
+  - LT: Returns true if x < y (Less Than)
+    - ['INT', 'INT'] -> BOOL
+    - ['DOUBLE', 'DOUBLE'] -> BOOL
+  - ADD: Returns x + y
+    - ['INT', 'INT'] -> INT
+    - ['DOUBLE', 'DOUBLE'] -> DOUBLE
+  - GT: Returns true if x > y (Greater Than)
+    - ['INT', 'INT'] -> BOOL
+    - ['DOUBLE', 'DOUBLE'] -> BOOL
+  - MODULO: Returns x % y
+    - ['INT', 'INT'] -> INT
+  - DIV: Returns x / y
+    - ['DOUBLE', 'DOUBLE'] -> DOUBLE
+  - IROUND: Round x and return it as an integer
+    - ['DOUBLE'] -> INT
+  - MULT: Returns x * y
+    - ['DOUBLE', 'DOUBLE'] -> DOUBLE
+    - ['INT', 'INT'] -> INT
+- Execution Control
+  - SLEEP: Sleep for x seconds. Fractions are allowed. Millisecond accuracy.
+    - ['DOUBLE'] -> BOOL
+- Conditional Execution
+  - IF_ELSE: Executes x, if true, execute y, otherwise, execute z. Returns true if x is true.
+    - ['BOOL', 'BOOL', 'BOOL'] -> BOOL
+  - IF: Executes x, if true, execute y. Returns true if x is true.
+    - ['BOOL', 'BOOL'] -> BOOL
+
+*/
