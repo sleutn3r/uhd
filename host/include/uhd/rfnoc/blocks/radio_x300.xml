@@ -25,7 +25,7 @@
       <type>int</type>
       <value>256</value>
       <check>GE($spp, 0)</check>
-      <check_message>spp has to be greater than zero.</check_message>
+      <check_message>spp has to be greater or equal to zero.</check_message>
     </arg>
     <arg>
       <name>pkt_size</name>
