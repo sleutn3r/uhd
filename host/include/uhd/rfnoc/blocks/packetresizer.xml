@@ -21,7 +21,7 @@
     <arg>
       <name>pkt_size</name>
       <type>int</type>
-      <value>32</value>
+      <value>4096</value>
       <check>GT($pkt_size, 0)</check>
       <check_message>Packet size must be positive, non-zero.</check_message>
       <action>SR_WRITE("SR_PKT_SIZE", $pkt_size)</action>
@@ -33,6 +33,7 @@
     </sink>
     <source>
       <name>out</name>
+      <pkt_size>$pkt_size</pkt_size>
     </source>
   </ports>
   <!--<components>-->
