@@ -566,7 +566,7 @@ stream_sig_t block_ctrl_base::_resolve_port_def(const blockdef::port_t &port_def
     } else {
         stream_sig.packet_size = boost::lexical_cast<size_t>(port_def["pkt_size"]);
     }
-    //UHD_RFNOC_BLOCK_TRACE() << "  packet size: " << stream_sig.vlen ;
+    UHD_RFNOC_BLOCK_TRACE() << "  packet size: " << stream_sig.packet_size;
 
     return stream_sig;
 }

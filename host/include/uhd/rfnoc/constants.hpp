@@ -37,7 +37,7 @@ static const std::string DEFAULT_BLOCK_NAME = "Block";
 static const uint64_t DEFAULT_NOC_ID = 0xFFFFFFFFFFFFFFFF;
 
 static const size_t MAX_PACKET_SIZE = 8000; // bytes
-static const size_t DEFAULT_PACKET_SIZE = 1456; // bytes
+static const size_t DEFAULT_PACKET_SIZE = MAX_PACKET_SIZE-16; // bytes, changed from 1456, -16 for header
 
 // One line in FPGA is 64 Bits
 static const size_t BYTES_PER_LINE = 8;
