@@ -19,21 +19,33 @@
   </registers>
   <args>
     <arg>
-      <name>pkt_size</name>
+      <name>spp_in</name>
       <type>int</type>
-      <value>4096</value>
-      <check>GT($pkt_size, 0)</check>
-      <check_message>Packet size must be positive, non-zero.</check_message>
-      <action>SR_WRITE("SR_PKT_SIZE", $pkt_size)</action>
+      <value>64</value>
+      <check>GT($spp_in, 0)</check>
+      <check_message>spp_in: Samples per packet must be positive, non-zero.</check_message>
+    </arg>
+    <arg>
+      <name>spp_out</name>
+      <type>int</type>
+      <value>1024</value>
+      <check>GT($spp_out, 0)</check>
+      <check_message>spp_out: Samples per packet must be positive, non-zero.</check_message>
+      <action>SR_WRITE("SR_PKT_SIZE", MULT($spp_out, 4))</action>
     </arg>
   </args>
   <ports>
     <sink>
       <name>in</name>
+      <type>sc16</type>
+      <vlen>$spp_in</vlen>
+      <pkt_size>%vlen</pkt_size>
     </sink>
     <source>
       <name>out</name>
-      <pkt_size>$pkt_size</pkt_size>
+      <type>sc16</type>
+      <vlen>$spp_out</vlen>
+      <pkt_size>%vlen</pkt_size>
     </source>
   </ports>
   <!--<components>-->
