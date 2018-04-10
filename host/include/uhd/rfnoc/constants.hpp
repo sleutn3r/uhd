@@ -45,9 +45,9 @@ static const size_t BYTES_PER_LINE = 8;
 //! For flow control within a single crossbar
 static const size_t DEFAULT_FC_XBAR_PKTS_PER_ACK = 2;
 //! For flow control when data is flowing from device to host (rx)
-static const size_t DEFAULT_FC_RX_RESPONSE_FREQ = 64; // ACKs per flow control window
+static const size_t DEFAULT_FC_RX_RESPONSE_FREQ = 8; // ACKs per flow control window, changed from 64
 //! For flow control when data is flowing from host to device (tx)
-static const size_t DEFAULT_FC_TX_RESPONSE_FREQ = 8; // ACKs per flow control window
+static const size_t DEFAULT_FC_TX_RESPONSE_FREQ = 8; // ACKs per flow control window, changed from 8
 //! On the receive side, how full do we want the buffers?
 //  Why not 100% full? Because we need to have some headroom to account for the inaccuracy
 //  when computing the window size. We compute the flow control window based on the frame
