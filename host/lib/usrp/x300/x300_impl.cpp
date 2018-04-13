@@ -1258,9 +1258,9 @@ uhd::both_xports_t x300_impl::make_transport(
         size_t system_max_recv_frame_size = (size_t) _max_frame_sizes.recv_frame_size;
 
         // --- Added for debugging ---
-        UHD_LOGGER_TRACE("x300_impl.cpp:1260") << boost::format(
-            "xport_type: %d, system_max_send_frame_size: %d, system_max_recv_frame_size: %d"
-        ) % xport_type % system_max_send_frame_size % system_max_recv_frame_size;
+        UHD_LOGGER_TRACE("x300_impl.cpp:1261") << boost::format(
+            "xport_type: %d, system_max_send_frame_size: %d, system_max_recv_frame_size: %d | eth_data_rec_frame_size: %d"
+        ) % xport_type % system_max_send_frame_size % system_max_recv_frame_size % eth_data_rec_frame_size;
 
         // Make sure frame sizes do not exceed the max available value supported by UHD
         default_buff_args.send_frame_size =

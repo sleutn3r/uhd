@@ -89,6 +89,11 @@ block_ctrl_base::block_ctrl_base(
         size_t buf_size_bytes = BYTES_PER_LINE * (1 << buf_size_log2); // Bytes == 8 * 2^x
         if (buf_size_bytes > 0) n_valid_input_buffers++;
         _tree->create<size_t>(_root_path / "input_buffer_size" / ctrl_port).set(buf_size_bytes);
+
+        // --- Added for debugging ---
+        UHD_LOGGER_TRACE("block_ctrl_base:94") << boost::format(
+            "buf_size_log2: %d, buf_size_bytes: %d, ctrl_port: %d"
+        ) % buf_size_log2 % buf_size_bytes % ctrl_port;
     }
 
     /*** Register names *****************************************************/

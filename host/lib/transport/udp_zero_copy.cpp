@@ -335,11 +335,11 @@ udp_zero_copy::sptr udp_zero_copy::make(
     );
 
     // --- Added for debugging ---
-    UHD_LOGGER_TRACE("UHD_ZERO_COPY") << boost::format(
+    UHD_LOGGER_TRACE("udp_zero_copy:338") << boost::format(
         "xport params:\nrecv_frame_size: %d, num_recv_frames: %d\n"
         "send_frame_size: %d, num_send_frames: %d"
     ) % xport_params.recv_frame_size % xport_params.num_recv_frames % xport_params.send_frame_size % xport_params.num_send_frames;
-    UHD_LOGGER_TRACE("UHD_ZERO_COPY") << boost::format(
+    UHD_LOGGER_TRACE("udp_zero_copy:342") << boost::format(
         "rx_buff: %d, tx_buff: %d"
     ) % usr_recv_buff_size % usr_send_buff_size;
 

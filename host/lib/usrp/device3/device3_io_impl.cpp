@@ -332,6 +332,10 @@ static size_t get_tx_flow_control_window(
     if (window_in_pkts == 0) {
         throw uhd::value_error("send_buff_size must be larger than the send_frame_size.");
     }
+    // --- Added for debugging ---
+    UHD_LOGGER_TRACE("device3_io_impl::get_tx_flow_control_window()") << boost::format(
+        "\nhw_buff_size: %d (%d), pkt_size: %d, window_in_pkts: %d"
+    ) % hw_buff_size % hw_buff_size_ % pkt_size % window_in_pkts;
     return window_in_pkts;
 }
 
