@@ -129,6 +129,8 @@ void device3_impl::enumerate_rfnoc_blocks(
             transport_args
         );
         UHD_DEVICE3_LOG() << str(boost::format("Setting up NoC-Shell Control for port #0 (SID: %s)...") % xport.send_sid.to_pp_string_hex());
+        // -- Added debugging --
+        UHD_DEVICE3_LOG() << str(boost::format("CE_%02d_Port_%02X") % i % ctrl_sid.get_dst_endpoint());
         uhd::rfnoc::ctrl_iface::sptr ctrl = uhd::rfnoc::ctrl_iface::make(
                 xport.endianness == uhd::ENDIANNESS_BIG,
                 xport.send,
