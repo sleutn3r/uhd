@@ -72,7 +72,7 @@ static const size_t X300_ETH_MSG_FRAME_SIZE         = uhd::transport::udp_simple
 // MTU throttling for ethernet/TX (see above):
 static const size_t X300_ETH_DATA_FRAME_MAX_TX_SIZE = 8000;
 
-static const double X300_THREAD_BUFFER_TIMEOUT      = 0.1;   // Time in seconds
+static const double X300_THREAD_BUFFER_TIMEOUT      = 0.1;   // Time in seconds, changed from 0.1
 
 static const size_t X300_ETH_MSG_NUM_FRAMES         = 64;
 static const size_t X300_ETH_DATA_NUM_FRAMES        = 32;

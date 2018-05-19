@@ -132,7 +132,7 @@ protected:
 
         //recv reply
         x300_fw_comms_t reply = x300_fw_comms_t();
-        const size_t nbytes = udp->recv(boost::asio::buffer(&reply, sizeof(reply)), 1.0);
+        const size_t nbytes = udp->recv(boost::asio::buffer(&reply, sizeof(reply)), 1.5);  // changed timeout from 1.0
         if (nbytes == 0) throw uhd::io_error("x300 fw poke32 - reply timed out");
 
         //sanity checks
@@ -161,7 +161,7 @@ protected:
 
         //recv reply
         x300_fw_comms_t reply = x300_fw_comms_t();
-        const size_t nbytes = udp->recv(boost::asio::buffer(&reply, sizeof(reply)), 1.0);
+        const size_t nbytes = udp->recv(boost::asio::buffer(&reply, sizeof(reply)), 1.5);  // changed timeout from 1.0
         if (nbytes == 0) throw uhd::io_error("x300 fw peek32 - reply timed out");
 
         //sanity checks

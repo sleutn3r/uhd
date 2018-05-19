@@ -38,8 +38,8 @@ namespace uhd { namespace usrp {
 /***********************************************************************
  * Default settings (any device3 may override these)
  **********************************************************************/
-static const size_t DEVICE3_RX_FC_REQUEST_FREQ         = 32;    //per flow-control window, changed from 32
-static const size_t DEVICE3_TX_FC_RESPONSE_FREQ        = 8;    // changed from 8
+static const size_t DEVICE3_RX_FC_REQUEST_FREQ         = 28;    //per flow-control window, changed from 32
+static const size_t DEVICE3_TX_FC_RESPONSE_FREQ        = 4;    // changed from 8
 static const size_t DEVICE3_TX_FC_RESPONSE_CYCLES      = 0;     // Cycles: Off.
 
 static const size_t DEVICE3_TX_MAX_HDR_LEN             = uhd::transport::vrt::chdr::max_if_hdr_words64 * sizeof(uint64_t);    // Bytes
