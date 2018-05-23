@@ -144,7 +144,7 @@ void graph_impl::connect(
         ));
     }
     src->configure_flow_control_out(buf_size_pkts, src_block_port);
-    // On the same crossbar, use lots of FC packets
+    // // On the same crossbar, use lots of FC packets
     // size_t pkts_per_ack = std::min(
     //         uhd::rfnoc::DEFAULT_FC_XBAR_PKTS_PER_ACK,
     //         buf_size_pkts - 1

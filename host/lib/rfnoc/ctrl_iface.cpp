@@ -34,7 +34,7 @@ using namespace uhd;
 using namespace uhd::rfnoc;
 using namespace uhd::transport;
 
-static const double ACK_TIMEOUT = 3.0; //supposed to be worst case practical timeout, changed from 2.0
+static const double ACK_TIMEOUT = 2.0; //supposed to be worst case practical timeout, changed from 2.0
 static const double MASSIVE_TIMEOUT = 10.0; //for when we wait on a timed command, changed from 10.0
 
 ctrl_iface::~ctrl_iface(void){
